@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+numpy
+pandas
+faiss-cpu
+sqlalchemy
+psycopg2-binary
+redis
+loguru
+xgboost
+pyarrow

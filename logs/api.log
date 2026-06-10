@@ -1,0 +1,3 @@
+2026-06-10 12:07:14.265 | INFO     | backend.app:recommend:48 - Recommendation requested for user_id=123
+2026-06-10 12:07:17.495 | INFO     | backend.app:recommend:48 - Recommendation requested for user_id=123
+2026-06-10 12:07:25.779 | INFO     | backend.app:metrics_api:70 - Metrics endpoint requested

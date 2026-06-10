@@ -1,0 +1,22 @@
+artifact_path: /Users/suryansh/Projects/OmniRecAI/mlruns/1/models/m-4eb3900c475b4997bcaa156f60759309/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.14.5
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.2.0
+mlflow_version: 3.13.0
+model_id: m-4eb3900c475b4997bcaa156f60759309
+model_size_bytes: 559321
+model_uuid: m-4eb3900c475b4997bcaa156f60759309
+prompts: null
+run_id: a94e97016be14ad39bf23e506ec4bcd6
+utc_time_created: '2026-06-10 08:25:59.199933'
