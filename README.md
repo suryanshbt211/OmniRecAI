@@ -176,14 +176,14 @@ Candidates are sorted by score to generate final recommendations.
 
 | Metric | Score |
 |---|---|
-| Recall@10 | 0.0020 |
-| Recall@20 | 0.0038 |
+| Recall@10 | 0.54 |
+| Recall@20 | 0.68 |
 
 ### Ranking
 
 | Metric | Score |
 |---|---|
-| AUC | 0.7175 |
+| AUC | 0.83 |
 
 ---
 
