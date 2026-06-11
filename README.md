@@ -205,3 +205,24 @@ Candidates are sorted by score to generate final recommendations.
 ## API Endpoints
 
 ### Health Check
+GET /health
+Response:
+```json
+{
+  "status": "healthy",
+  "service": "OmniRecAI"
+}
+```
+
+### Recommendations
+GET /recommend/{user_id}
+Response:
+```json
+{
+  "user_id": 123,
+  "count": 10,
+  "recommendations": [...]
+}
+```
+
+### Metrics
