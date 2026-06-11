@@ -307,4 +307,69 @@ http://127.0.0.1:5000
 ---
 
 ## Project Structure
+OmniRecAI
+│
+├── backend/
+│   ├── app.py
+│   ├── cache.py
+│   ├── database.py
+│   ├── repositories.py
+│   ├── recommendation_service.py
+│   └── models.py
+│
+├── frontend/
+│   ├── src/
+│   └── public/
+│
+├── retrieval/
+│   ├── train_retrieval.py
+│   ├── recommend.py
+│   └── evaluate_retrieval.py
+│
+├── ranking/
+│   ├── train_ranker.py
+│   └── build_ranking_dataset.py
+│
+├── scripts/
+│
+├── models/
+│
+├── data/
+│
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+└── README.md
 
+---
+
+## Future Improvements
+
+- Hybrid Recommendation System
+- Session-Based Recommendations
+- Online Learning
+- Kubernetes Deployment
+- Prometheus Monitoring
+- Grafana Dashboards
+- A/B Testing Framework
+- Real-Time Feature Store
+- Feature Registry
+- Model Registry
+
+---
+
+## Author
+
+**Suryansh Talukdar**  
+MS Computer Science, Purdue University Fort Wayne
+
+**Research Interests:**
+- Recommender Systems
+- Machine Learning
+- Deep Learning
+- MLOps
+- Responsible AI
+
+**GitHub:** [OmniRecAI Repository](https://github.com/suryanshbt211/OmniRecAI)
+
+---
