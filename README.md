@@ -1,0 +1,176 @@
+# OmniRecAI 🚀
+
+> End-to-End Recommendation System using Deep Learning Retrieval, FAISS, XGBoost, FastAPI, PostgreSQL, Redis, Docker, MLflow, and React
+
+---
+
+## Overview
+
+OmniRecAI is a production-style recommendation platform that generates personalized recommendations for users using a two-stage recommendation pipeline:
+
+- **Retrieval Stage** – A Deep Learning Two-Tower Model retrieves the most relevant candidate items.
+- **Ranking Stage** – An XGBoost Ranker scores and ranks retrieved candidates to generate final recommendations.
+
+The system is served through FastAPI, accelerated with Redis caching, backed by PostgreSQL, tracked using MLflow, containerized with Docker, and visualized through a React dashboard.
+
+---
+
+## Architecture
+---
+
+## Key Features
+
+### Deep Learning Retrieval
+- Two-Tower Neural Network
+- User Embeddings
+- Item Embeddings
+- Contrastive Learning Style Retrieval
+- FAISS Vector Search
+
+### Ranking System
+- XGBoost Ranker
+- User Features
+- Item Features
+- Behavioral Features
+- Probability-Based Ranking
+
+### Backend
+- FastAPI
+- REST APIs
+- Structured JSON Responses
+- Logging
+- Metrics Tracking
+
+### Database
+- PostgreSQL
+- SQLAlchemy ORM
+- Repository Pattern
+
+### Caching
+- Redis
+- Recommendation Caching
+- Cache Hit/Miss Monitoring
+
+### MLOps
+- MLflow Experiment Tracking
+- Model Versioning
+- Hyperparameter Logging
+- Metric Tracking
+
+### Frontend
+- React
+- Vite
+- Axios
+- Recommendation Dashboard
+
+### Deployment
+- Docker
+- Docker Compose
+- Multi-Service Architecture
+
+---
+
+## Dataset
+
+Synthetic large-scale recommendation dataset:
+
+| Metric | Value |
+|---|---|
+| Users | 10,000 |
+| Items | 5,000 |
+| Interactions | 500,000 |
+| Retrieval Training Pairs | 125,130 |
+| Ranking Samples | 500,000 |
+
+**User Features**
+- Age
+- Premium Membership
+- Total Views
+- Total Clicks
+- Total Purchases
+
+**Item Features**
+- Category
+- Price
+- Rating
+- Total Views
+- Total Clicks
+- Total Purchases
+
+---
+
+## Model Pipeline
+
+### Stage 1: Retrieval
+
+The retrieval model learns user-item similarity using a Two-Tower architecture.
+
+**Input:**
+- User Features
+- Item Features
+- Interaction Labels
+
+**Output:**
+- 64-Dimensional User Embedding
+- 64-Dimensional Item Embedding
+
+FAISS performs nearest-neighbor search to retrieve relevant candidate items.
+
+### Stage 2: Ranking
+
+The ranker receives retrieved candidates and predicts engagement probability.
+
+**Features:**
+- Age
+- Premium User
+- Price
+- Rating
+- User Views
+- User Clicks
+- User Purchases
+- Item Views
+- Item Clicks
+- Item Purchases
+
+**Output:**
+- Probability(User Likes Item)
+
+Candidates are sorted by score to generate final recommendations.
+
+---
+
+## Experimental Results
+
+### Retrieval
+
+| Metric | Score |
+|---|---|
+| Recall@10 | 0.0020 |
+| Recall@20 | 0.0038 |
+
+### Ranking
+
+| Metric | Score |
+|---|---|
+| AUC | 0.7175 |
+
+---
+
+## Technology Stack
+
+| Category | Technologies |
+|---|---|
+| Machine Learning | PyTorch, XGBoost, NumPy, Pandas, Scikit-Learn |
+| Vector Search | FAISS |
+| Backend | FastAPI, Uvicorn |
+| Database | PostgreSQL, SQLAlchemy |
+| Cache | Redis |
+| Frontend | React, Vite, Axios |
+| MLOps | MLflow |
+| Infrastructure | Docker, Docker Compose |
+
+---
+
+## API Endpoints
+
+### Health Check
