@@ -16,6 +16,37 @@ The system is served through FastAPI, accelerated with Redis caching, backed by 
 ---
 
 ## Architecture
+                 User ID
+                    │
+                    ▼
+         Two-Tower Retrieval Model
+               (PyTorch)
+                    │
+                    ▼
+           User Embedding Vector
+                    │
+                    ▼
+              FAISS Search
+                    │
+                    ▼
+         Top Candidate Items
+                    │
+                    ▼
+             XGBoost Ranker
+                    │
+                    ▼
+         Top Recommendations
+                    │
+                    ▼
+              FastAPI API
+                    │
+        ┌───────────┴───────────┐
+        ▼                       ▼
+     Redis Cache          PostgreSQL
+        │                       │
+        └───────────┬───────────┘
+                    ▼
+              React Dashboard
 ---
 
 ## Key Features
