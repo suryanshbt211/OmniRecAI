@@ -226,3 +226,85 @@ Response:
 ```
 
 ### Metrics
+GET /metrics
+Response:
+```json
+{
+  "request_count": 10,
+  "recommendation_requests": 8,
+  "cache_hits": 4,
+  "cache_misses": 4
+}
+```
+
+---
+
+## Running Locally
+
+### Clone Repository
+
+```bash
+git clone https://github.com/suryanshbt211/OmniRecAI.git
+
+cd OmniRecAI
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Start Backend
+
+```bash
+python3 -m uvicorn backend.app:app --reload
+```
+
+### Start Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Running with Docker
+
+Start all services:
+
+```bash
+docker compose up --build
+```
+
+Services:
+FastAPI      → localhost:8000
+PostgreSQL   → localhost:5432
+Redis        → localhost:6379
+React        → localhost:5173
+---
+
+## MLflow Tracking
+
+Train ranker with experiment tracking:
+
+```bash
+python3 train_ranker_mlflow.py
+```
+
+Launch MLflow UI:
+
+```bash
+python3 -m mlflow ui --backend-store-uri sqlite:///mlflow.db
+```
+
+Open:
+http://127.0.0.1:5000
+---
+
+## Project Structure
+
